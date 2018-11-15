@@ -82,6 +82,55 @@ render(){
 导航器通过路由对象来分辨不同的场景。利用 renderScene 方法，导航栏可以根据指定的路由来渲染场景。
 可以通过 configureScene 属性获取指定路由对象的配置信息，从而改变场景的动画或者手势。
 
+#### 2018.11.15
+
+1. **VS Code** 中引入代码规范的问题
+在 **.eslintrc** 文件中,
+
+```javascript
+{
+    "extends": "eslint-config-mcrn",
+    "globals": {
+      "__DEV__": false,
+      "fetch": false,
+      "navigator": false,
+      "store": false,
+      "mconnect": false,
+      "screen": false
+    }
+  }
+```
+
+**package.json** 中，
+
+```javascript
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.48.3",
+    "react-test-renderer": "16.6.0-alpha.8af6728",
+    "eslint-config-mcrn": "*"
+  },
+``` 
+
+2. 编译过程中遇到的关于 **npm** 的几个错误：
+ 
+ * No bundle url present
+ 重新 **npm install**，[issues/12754](https://github.com/facebook/react-native/issues/12754)
+ * "RCTBundleURLProvider.h" file not found - AppDelegate.m
+ 先 **npm install** 再 **react-native upgrade** 版本仍为当前版本。
+ ["RCTBundleURLProvider.h” file not found](https://stackoverflow.com/questions/40368211/rctbundleurlprovider-h-file-not-found-appdelegate-m)
+ * [Workarounds] Packager unable to resolve module from /Users/node_modules 
+  运行时，突然报这个错，模拟器会给出解决错误的四个提示：
+
+1. Delete the node_modules folder - rm -rf node_modules && npm install
+2. Reset packager cache - rm -fr $TMPDIR/react-* or node_modules/react-native/packager/packager.sh --reset-cache
+3. Clear watchman watches - watchman watch-del-all
+4. Recreate the project from scratch
+删除工程主目录下的 **node_modules** 文件夹，重新 **npm install** 解决。
+
+[issues/4968](https://github.com/facebook/react-native/issues/4968)
+
 ### 今天练了啥
 #### 2018.11.02
 
