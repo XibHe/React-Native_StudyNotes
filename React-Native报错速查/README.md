@@ -116,10 +116,10 @@
 
     编译时，突然报这个错，模拟器会给出解决错误的四个提示：
     
-     1. Delete the node_modules folder - rm -rf node_modules && npm install
-     2. Reset packager cache - rm -fr $TMPDIR/react-* or node_modules/react-native/packager/packager.sh --reset-cache
-     3. Clear watchman watches - watchman watch-del-all
-     4. Recreate the project from scratch 
+    1. Delete the node_modules folder - rm -rf node_modules && npm install
+    2. Reset packager cache - rm -fr $TMPDIR/react-* or node_modules/react-native/packager/packager.sh --reset-cache
+    3. Clear watchman watches - watchman watch-del-all
+    4. Recreate the project from scratch 
    
      删除工程主目录下的 **node_modules** 文件夹，重新 **npm install** 解决。   
    
