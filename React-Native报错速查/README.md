@@ -3,11 +3,11 @@
 1. You are currently running Node v8.1.2 but React Native requires >=8.3
    
    ```javascript
-   Computing checksum with shasum -a 256
-Checksums matched!
-Now using node v8.3.0 (npm v5.3.0)
-Reinstalling global packages from v8.1.3..
+   Computing checksum with shasum -a 256 Checksums matched! Now
+   using node v8.3.0 (npm v5.3.0) Reinstalling global packages
+   from v8.1.3..
    ```
+   
    **node** 版本过低导致，需要升级 **node**。
 
    [upgrading-node-js-to-latest-version](https://stackoverflow.com/questions/10075990/upgrading-node-js-to-latest-version)
