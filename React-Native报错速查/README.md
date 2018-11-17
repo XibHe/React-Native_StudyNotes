@@ -12,7 +12,7 @@
 
    [upgrading-node-js-to-latest-version](https://stackoverflow.com/questions/10075990/upgrading-node-js-to-latest-version)
 
-  [一篇文章了解Mac上Node环境配置](https://segmentfault.com/a/1190000015416829)
+   [一篇文章了解Mac上Node环境配置](https://segmentfault.com/a/1190000015416829)
 
 2. 升级 **React Native** 报错
    
@@ -114,22 +114,22 @@
    
 10. [Workarounds] Packager unable to resolve module from /Users/node_modules/ #4968
 
-   编译时，突然报这个错，模拟器会给出解决错误的四个提示：
+    编译时，突然报这个错，模拟器会给出解决错误的四个提示：
     
-   1. Delete the node_modules folder - rm -rf node_modules && npm install
-   2. Reset packager cache - rm -fr $TMPDIR/react-* or node_modules/react-native/packager/packager.sh --reset-cache
-   3. Clear watchman watches - watchman watch-del-all
-   4. Recreate the project from scratch 
+     1. Delete the node_modules folder - rm -rf node_modules && npm install
+     2. Reset packager cache - rm -fr $TMPDIR/react-* or node_modules/react-native/packager/packager.sh --reset-cache
+     3. Clear watchman watches - watchman watch-del-all
+     4. Recreate the project from scratch 
    
-   删除工程主目录下的 **node_modules** 文件夹，重新 **npm install** 解决。   
+     删除工程主目录下的 **node_modules** 文件夹，重新 **npm install** 解决。   
    
-   <font color=#DC143C>注意：</font>后来第二天又遇到了这个问题，这就比较奇怪了。在同事的帮助下，最终明白了，频繁导致这个原因：在引入一个三方组件后，需要执行 **yarn** 或者 **npm install** 命令进行配置。究其原因是使用三方组件时，通过，
+     <font color=#DC143C>注意：</font>后来第二天又遇到了这个问题，这就比较奇怪了。在同事的帮助下，最终明白了，频繁导致这个原因：在引入一个三方组件后，需要执行 **yarn** 或者 **npm install** 命令进行配置。究其原因是使用三方组件时，通过，
+     
+     ```
+     import xxx from 'react-native-xxx';
+     ```
    
-   ```javascript
-   import xxx from 'react-native-xxx';
-   ```
-   
-   导入。
+     导入。
    
 11. 安装模板工程 mcrn-cli   
    
