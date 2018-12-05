@@ -194,3 +194,14 @@
     }
     ```
     [JavaScript 的 this 指向问题深度解析](https://segmentfault.com/a/1190000008400124)   
+    
+15. 安装依赖库 **react-navigation** 后报错
+    
+    ```javascript
+    undefined is not a function (near '...(0 ,  
+    _reactNavigation.TabNavigator)...') 
+    ```    
+    
+    最终定位问题为 **react-navigation** 高版本中调用方法改变导致，示例  
+    demo 的 **react-navigation** 版本为 *1.5.8* 而项目中 **react- 
+    navigation** 版本为 *3.0.5*
