@@ -235,7 +235,8 @@ render(){
 
 1. 安装 **Debugger for Chrome** 插件;
 2. 在调试窗口添加配置，点击“添加配置” 选择项后会弹出配置子项的列表，分别配置 *Launch Chrome*，*Attach to packager*，*Debug iOS* 三项；
-3. 在调试窗口中，分别运行 *Attach to packager* 和 *Debug iOS* ，然后可以查看 **console.log** 在控制台中的输出数据或者在文件中打断点进行调试。
+3. 在模拟器端打开 **Debug JS Remotely** 的设置；(很重要)
+4. 在调试窗口中，分别运行 *Attach to packager* 和 *Debug iOS* ，然后可以查看 **console.log** 在控制台中的输出数据或者在文件中打断点进行调试。
    
 ### 练习
 #### 2018.11.02
