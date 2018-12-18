@@ -205,3 +205,15 @@
     最终定位问题为 **react-navigation** 高版本中调用方法改变导致，示例  
     demo 的 **react-navigation** 版本为 *1.5.8* 而项目中 **react- 
     navigation** 版本为 *3.0.5*
+    
+16. 使用 **VSCode** 调试时，关闭 **Attach to packager** 时报错
+
+    ```javascript
+    Runtime is not ready for debugging. Make sure Packager
+    server is running. 
+    ```
+    
+    解决方式：
+    1. 启动调试配置 并执行命令 > *react native stop packager*
+    2. 模拟器关闭 *Debuge JS Remotely*
+  
